@@ -42,7 +42,7 @@ class UnitServiceProvider extends ServiceProvider
      */
     private function loadRoutes()
     {
-        Route::group(['namespace' => 'LeePrince\Unit\Http\Controllers', 'prefix' => 'unit'], function() {
+        Route::group(['namespace' => 'LeePrince\Unit\Http\Controllers', 'prefix' => 'unit', 'middleware' => 'web'], function() {
             $this->loadRoutesFrom(__DIR__.'/Route/route.php');
         });
     }

@@ -14,5 +14,12 @@
         "psr-4": {
             "LeePrince\\Unit\\": "./src/"
         }
+    },
+    "extra":{
+        "laravel":{
+            "providers":[
+                "LeePrince\\Unit\\UnitServiceProvider"
+            ]
+        }
     }
 }

@@ -6,5 +6,5 @@
  * @Author  leeprince:2020-07-05 14:59
  */
 
-route::get('/', 'UnitController@index');
-route::post('/', 'UnitController@request')->name('unit.request');
+Route::get('/', 'UnitController@index');
+Route::post('/', 'UnitController@request')->name('unit.request');

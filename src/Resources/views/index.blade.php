@@ -10,7 +10,17 @@
 <body>
 <fieldset>
     <legend>单元测试窗口</legend>
+    @if ($errors->all())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form action="{{route("unit.request")}}" method="post">
+        @csrf
         <table>
             <tr>
                 <td>命名空间(命名空间可以包含类名，然后下面的类名可以省略)</td>
