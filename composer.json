@@ -1,0 +1,18 @@
+{
+    "name": "leeprince/laravel-unit",
+    "description": "laravel unit composer",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "leeprince",
+            "email": "leeprince@foxmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "LeePrince\\Unit\\": "./src/"
+        }
+    }
+}
