@@ -26,7 +26,7 @@ composer require leeprincne/laravel-unit
 ```
 
 ## 路由说明
-```angular2
+```
 <?php
 /**
  * [已在组件中定义路由前缀为： unit； 所以访问以下路径需要添加前缀 unit]

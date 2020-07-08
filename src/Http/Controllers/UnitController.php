@@ -34,14 +34,13 @@ class UnitController extends Controller
     {
         $namespace = $request->input('namespace');
         $className = $request->input('className');
-        $action    = $request->input('action');
+        $action    = $request->input('action', 'index');
         $param     = $request->input('param');
     
         $request->validate([
             'namespace' => "bail|required|between:5,8",
         ], [
             'namespace.required' => ':attribute 是必填项！',
-            'namespace.between' => ':attribute 值 :input 的长度未在 :min - :max. 范围内'
         ], [
             'namespace' => '「命名空间」'
         ]);

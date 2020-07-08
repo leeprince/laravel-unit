@@ -9,7 +9,9 @@
             "email": "leeprince@foxmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "^7.2"
+    },
     "autoload": {
         "psr-4": {
             "LeePrince\\Unit\\": "./src/"
