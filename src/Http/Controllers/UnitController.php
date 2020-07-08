@@ -38,7 +38,7 @@ class UnitController extends Controller
         $param     = $request->input('param');
     
         $request->validate([
-            'namespace' => "bail|required|between:5,8",
+            'namespace' => "bail|required",
         ], [
             'namespace.required' => ':attribute 是必填项！',
         ], [
