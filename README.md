@@ -19,7 +19,7 @@ composer require leeprincne/laravel-unit
     "extra":{
         "laravel":{
             "providers":[
-                "ShineYork\\JunitLaravel\\JunitServiceProvide"
+                "LeePrince\\Unit\\JunitServiceProvide"
             ]
         }
     }
