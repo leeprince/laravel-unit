@@ -13,7 +13,7 @@ composer require leeprincne/laravel-unit
 
 
 ## 配置方式
-该组件的 composer.json 中已加入以下部分，所以在项目根目录的 config/app.php 的 providers 数组中无需加入 ShineYork\JunitLaravel\JunitServiceProvide::class, 否则需要加入 
+该组件的 composer.json 中已加入以下部分，所以在项目根目录的 config/app.php 的 providers 数组中无需加入 LeePrince\\Unit\\UnitServiceProvider, 否则需要加入 
 
 ```angular2
     "extra":{
