@@ -44,6 +44,9 @@ class UnitServiceProvider extends ServiceProvider
     {
         Route::group(['namespace' => 'LeePrince\Unit\Http\Controllers', 'prefix' => 'unit', 'middleware' => 'web'], function() {
             $this->loadRoutesFrom(__DIR__.'/Route/route.php');
+            
+            // laravel 版本 <= 5.3 以下版本
+            // require __DIR__.'/Route/route.php';
         });
     }
     

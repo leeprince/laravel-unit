@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77c855b6-166a-4b9a-8485-16412d3af2ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnitServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UnitServiceProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,13 +15,13 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.33870968">
+    <splitter split-orientation="vertical" split-proportion="0.16463415">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Http/Controllers/UnitController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="104">
+                <state relative-caret-position="-425">
                   <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
                   <folding>
                     <element signature="e#118#152#0#PHP" expanded="true" />
@@ -51,20 +52,41 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/composer.json">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Http/Controllers/UnitController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+                <state relative-caret-position="5">
+                  <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+                  <folding>
+                    <element signature="e#118#152#0#PHP" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/composer.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="31">
+                  <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/composer.lock">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-117">
+                  <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/UnitServiceProvider.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+                <state relative-caret-position="157">
+                  <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
                   <folding>
                     <element signature="e#6#104#0#PHP" expanded="true" />
                     <element signature="e#133#172#0#PHP" expanded="true" />
@@ -117,7 +139,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$USER_HOME$/laravel69/vendor/leeprince/laravel-unit/src/UnitServiceProvider.php" />
         <option value="$USER_HOME$/laravel69/composer.json" />
-        <option value="$PROJECT_DIR$/src/UnitServiceProvider.php" />
         <option value="$USER_HOME$/laravel69/app/Http/Controllers/ComposerUnitTestController.php" />
         <option value="$USER_HOME$/laravel69/vendor/leeprince/laravel-unit/src/Http/Controllers/UnitController.php" />
         <option value="$USER_HOME$/laravel69/config/app.php" />
@@ -130,6 +151,7 @@
         <option value="$USER_HOME$/laravel69/resources/views/validateFrom.blade.php" />
         <option value="$PROJECT_DIR$/src/Resources/views/index.blade.php" />
         <option value="$USER_HOME$/laravel69/app/Http/Controllers/ValidateController.php" />
+        <option value="$PROJECT_DIR$/src/UnitServiceProvider.php" />
       </list>
     </option>
   </component>
@@ -206,6 +228,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
@@ -235,12 +263,12 @@
       <workItem from="1593923727786" duration="2526000" />
       <workItem from="1593928920670" duration="23562000" />
       <workItem from="1594100254935" duration="225000" />
-      <workItem from="1607330357389" duration="631000" />
+      <workItem from="1607330357389" duration="4154000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26944000" />
+    <option name="totallyTimeSpent" value="30467000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -253,9 +281,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="175" y="148" width="1745" height="932" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49593496" visible="true" weight="0.30445105" />
-      <window_info id="Structure" order="1" sideWeight="0.50406504" side_tool="true" visible="true" weight="0.30445105" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.847561" visible="true" weight="0.30445105" />
+      <window_info id="Structure" order="1" sideWeight="0.15243903" side_tool="true" visible="true" weight="0.30445105" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -267,7 +296,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.38345864" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.38345864" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -302,7 +331,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/laravel69/vendor/leeprince/laravel-unit/src/Route/routes.php" />
     <entry file="file://$USER_HOME$/laravel69/composer.json" />
     <entry file="file://$USER_HOME$/laravel69/vendor/leeprince/laravel-unit/composer.json" />
     <entry file="file://$USER_HOME$/laravel69/vendor/leeprince/laravel-unit/src/UnitServiceProvider.php" />
@@ -354,16 +382,6 @@
     <entry file="file://$USER_HOME$/laravel69/resources/views/validateFrom.blade.php" />
     <entry file="file://$USER_HOME$/laravel69/app/Http/Controllers/ValidateController.php" />
     <entry file="file://$USER_HOME$/laravel69/app/Http/Controllers/Controller.php" />
-    <entry file="file://$PROJECT_DIR$/src/Http/Controllers/UnitController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
-          <folding>
-            <element signature="e#118#152#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Resources/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -378,17 +396,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-117">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="31">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Http/Controllers/UnitController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <element signature="e#118#152#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UnitServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        <state relative-caret-position="157">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
           <folding>
             <element signature="e#6#104#0#PHP" expanded="true" />
             <element signature="e#133#172#0#PHP" expanded="true" />
