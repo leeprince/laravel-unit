@@ -1,16 +1,17 @@
 <?php
 /**
- * [单元测试控制器 - laravel 版本大于 5.5 使用]
+ * [单元测试控制器 -
+    1. 兼容validate：laravel 版本小于等于 5.5 使用]
  *
  * @Author  leeprince:2020-07-05 14:17
  */
 
 namespace LeePrince\Unit\Http\Controllers;
 
-use Illuminate\Routing\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UnitController extends Controller
+class UnitControllerl extends Controller
 {
     /**
      * [测试窗口]
@@ -37,7 +38,7 @@ class UnitController extends Controller
         $action    = $request->input('action', 'index');
         $param     = $request->input('param');
     
-        $request->validate([
+        $this->validate($request, [
             'namespace' => "bail|required",
         ], [
             'namespace.required' => ':attribute 是必填项！',
