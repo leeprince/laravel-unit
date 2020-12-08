@@ -4,7 +4,7 @@
 
 ## 版本说明
 
-laravel >= 6.0 & php >= 7.2
+laravel >= 5.3 & php >= 7.0
 
 
 ## 安装方式
@@ -13,7 +13,7 @@ composer require leeprincne/laravel-unit
 
 
 ## 配置方式
-该组件的 composer.json 中已加入以下部分，所以在项目根目录的 config/app.php 的 providers 数组中无需加入 LeePrince\\Unit\\UnitServiceProvider, 否则需要加入 
+该组件的 composer.json 中已加入以下部分，所以在项目根目录的 config/app.php 的 providers 数组中无需加入 LeePrince\\Unit\\UnitServiceProvider::class, 否则需要加入或者 laravel 版本 < 5.5 版本的需要加入
 
 ```angular2
     "extra":{

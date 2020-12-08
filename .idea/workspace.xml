@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77c855b6-166a-4b9a-8485-16412d3af2ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Http/Controllers/UnitController.php.laravel_version_le_5.5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Http/Controllers/UnitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Http/Controllers/UnitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +28,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Http/Controllers/UnitController.php.laravel_version_le_5.5">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="255">
+                <caret line="15" column="116" selection-start-line="15" selection-start-column="116" selection-end-line="15" selection-end-column="116" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -115,6 +125,7 @@
         <option value="$PROJECT_DIR$/src/Http/Controllers/UnitController.laravel-version-le-5.5.php" />
         <option value="$PROJECT_DIR$/src/Http/Controllers/UnitController-laravel_version_le_5.5.php" />
         <option value="$PROJECT_DIR$/src/Http/Controllers/UnitController.php.laravel_version_le_5.5" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -232,12 +243,12 @@
       <workItem from="1593928920670" duration="23562000" />
       <workItem from="1594100254935" duration="225000" />
       <workItem from="1607330357389" duration="4928000" />
-      <workItem from="1607393596019" duration="1258000" />
+      <workItem from="1607393596019" duration="2074000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32499000" />
+    <option name="totallyTimeSpent" value="33315000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -300,7 +311,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/laravel69/vendor/leeprince/laravel-unit/composer.json" />
     <entry file="file://$USER_HOME$/laravel69/vendor/leeprince/laravel-unit/src/UnitServiceProvider.php" />
     <entry file="file://$USER_HOME$/laravel69/app/Http/Controllers/CookieController.php" />
     <entry file="file://$USER_HOME$/laravel69/app/Providers/AppServiceProvider.php" />
@@ -404,6 +414,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="255">
+            <caret line="15" column="116" selection-start-line="15" selection-start-column="116" selection-end-line="15" selection-end-column="116" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
