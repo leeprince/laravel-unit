@@ -21,6 +21,8 @@
     @endif
     <form action="{{route("unit.request")}}" method="post">
         @csrf
+        {{--关于csrf安全防护：laravel 低于等于 5.5 版本使用--}}
+        {{-- csrf_field() --}}
         <table>
             <tr>
                 <td>命名空间(命名空间可以包含类名，然后下面的类名可以省略)</td>

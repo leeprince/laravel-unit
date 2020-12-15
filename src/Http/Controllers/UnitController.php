@@ -54,6 +54,14 @@ class UnitController extends Controller
         ], [
             'namespace' => '「命名空间」'
         ]);
+        // 关于validate验证器：laravel 低于等于 5.5 版本使用
+        /*$this->validate($request, [
+            'namespace' => "bail|required",
+        ], [
+            'namespace.required' => ':attribute 是必填项！',
+        ], [
+            'namespace' => '「命名空间」'
+        ]);*/
         
         $class  = empty($className) ? $namespace : $namespace . '\\' . $className;
         $class  = str_replace("/", '\\', $class);
