@@ -14,8 +14,6 @@ class UnitController extends Controller
 {
     public function __construct()
     {
-        parent::__construct();
-        
         // 安全防护：环境检测，仅允许本地环境使用
         if (config('app.env') != 'local'
             || !config('app.debug')
