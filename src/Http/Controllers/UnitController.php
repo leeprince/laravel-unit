@@ -7,8 +7,8 @@
 
 namespace LeePrince\Unit\Http\Controllers;
 
-use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UnitController extends Controller
 {
@@ -54,7 +54,7 @@ class UnitController extends Controller
         ], [
             'namespace' => '「命名空间」'
         ]);
-        // 关于validate验证器：laravel 低于等于 5.5 版本使用
+        // 关于validate验证器：laravel 低于等于 5.5 版本使用; 而且必须继承 use App\Http\Controllers\Controller;
         /*$this->validate($request, [
             'namespace' => "bail|required",
         ], [
