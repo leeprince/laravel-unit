@@ -5,22 +5,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Document</title>
+    <link rel="stylesheet" href="{{$assetPath}}/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 </head>
 <body>
 <fieldset>
     <legend>单元测试窗口</legend>
-    @if ($errors->all())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    <form action="{{route("unit.request")}}" method="post">
-        @csrf
+    <form id="unitForm">
+        {{--@csrf--}}
+
         {{--关于csrf安全防护：laravel 低于等于 5.5 版本使用--}}
         {{-- csrf_field() --}}
         <table>
@@ -41,11 +35,12 @@
                 <td><input type="text" name="param" value="{{old('param')??""}}"></td>
             </tr>
             <tr>
-                <td colspan="2"><input type="submit" value="开始测试"></td>
             </tr>
         </table>
     </form>
 </fieldset>
+<td colspan="2"><button onclick="startUnitTest()">开始测试</button></td>
+
 </body>
 </html>
 
@@ -65,3 +60,31 @@
         width:50%;
     }
 </style>
+<script src="{{$assetPath}}/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script src="{{$assetPath}}/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function startUnitTest() {
+        var formData = $('#unitForm').serialize()
+        pajax("{{route('unit.request')}}", formData, function (res) {
+            console.log(res)
+            $('#unitResult').text(res)
+        })
+    }
+
+    function pajax(url, data, succCallback, type = 'post', dataType = 'json') {
+        $.ajax({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            url: url,
+            data: data,
+            type: type,
+            dataType: dataType,
+            success: succCallback,
+            error: function () {
+                console.log('执行失败')
+                // alert('执行失败')
+            }
+        })
+    }
+</script>
