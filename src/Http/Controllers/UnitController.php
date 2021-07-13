@@ -5,20 +5,39 @@
  * @Author  leeprince:2020-07-05 14:17
  */
 
-namespace LeePrince\Unit\Http\Controllers;
-
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class UnitController extends Controller
 {
+    const VALUE_STRING = 'string';
+    const VALUE_INT = 'int';
+    const VALUE_ARRAY = 'array';
+    const VALUE_BOOL = 'bool';
+    // 支持转换的数据类型
+    protected static $valueType = [
+        self::VALUE_STRING => 'strval',
+        self::VALUE_INT => 'intval',
+        self::VALUE_ARRAY => 'json_decode',
+        self::VALUE_BOOL => 'boolval',
+    ];
+    
+    // bool 类型对应的gettype
+    const TYPE_BOOL = 'boolean';
+    
+    // 线上环境标记
+    const ENV_PROD = 'prod';
+    
     public function __construct()
     {
-        // 安全防护：环境检测，仅允许本地环境使用
-        if (config('app.env') != 'local'
-            || !config('app.debug')
-        ) {
-            dd('prince: 403 forbidden');
+        if (!app()->runningInConsole()) {
+            // 环境检测，禁止生产环境使用
+            if (!(
+                config('app.debug')
+                || stripos(config('app.env'), self::ENV_PROD) === false)
+            ) {
+                dd('403 forbidden');
+            }
         }
     }
     
@@ -29,8 +48,6 @@ class UnitController extends Controller
      */
     public function index()
     {
-        // dump('Unit::index');
-        
         $assetPath = '/vendor/leeprince/laravel-unit';
         return view("unitview::index", ['assetPath' => $assetPath]);
     }
@@ -46,8 +63,8 @@ class UnitController extends Controller
     {
         $namespace = $request->input('namespace');
         $className = $request->input('className');
-        $action    = $request->input('action', 'index');
-        $param     = $request->input('param');
+        $action = $request->input('action', 'index');
+        $param = $request->input('param');
     
         $request->validate([
             'namespace' => "bail|required",
@@ -56,21 +73,16 @@ class UnitController extends Controller
         ], [
             'namespace' => '「命名空间」'
         ]);
-        // 关于validate验证器：laravel 低于等于 5.5 版本使用; 而且必须继承 use App\Http\Controllers\Controller;
-        /*$this->validate($request, [
-            'namespace' => "bail|required",
-        ], [
-            'namespace.required' => ':attribute 是必填项！',
-        ], [
-            'namespace' => '「命名空间」'
-        ]);*/
-    
+        
         $object = $this->getFullClass($namespace, $className);
-    
+        
         $paramArr = $this->getParamArr($param);
-    
+        
         try {
-            $data  = call_user_func_array([$object, $action], $paramArr);
+            $data = call_user_func_array([$object, $action], $paramArr);
+            if (gettype($data) === self::TYPE_BOOL) {
+                dd($data);
+            }
             return $data;
         } catch (\Exception $e) {
             dd('捕获异常：', $e);
@@ -102,12 +114,15 @@ class UnitController extends Controller
      */
     public function getTypeOfValue(string $value)
     {
-        if (! preg_match("/\((.*)\)(.*)/", $value, $match)) {
+        $charStr = implode('|', array_keys(self::$valueType));
+        if (!preg_match("/\(({$charStr})\)(.*)/", $value, $match)) {
             return $value;
         }
+        
         $type = $match[1]; // 强制转换类型
         $noConvertValue = $match[2]; // 原始字符串数据
-        if (! array_key_exists($type, self::$valueType)) {
+        
+        if (!array_key_exists($type, self::$valueType)) {
             return $value;
         }
         $convFunc = self::$valueType[$type]; // 方法
@@ -127,9 +142,9 @@ class UnitController extends Controller
      */
     public function getFullClass(string $namespace, string $className)
     {
-        $class  = empty($className) ? $namespace : $namespace . '\\' . $className;
-        $class  = str_replace("/", '\\', $class);
-        $class  = str_replace(";", '', $class);
+        $class = empty($className) ? $namespace : $namespace . '\\' . $className;
+        $class = str_replace("/", '\\', $class);
+        $class = str_replace(";", '', $class);
         
         return new $class();
     }

@@ -4,7 +4,7 @@
 
 ## 版本说明
 
-laravel >= 5.3 & php >= 7.0
+laravel >= 5.6 & php >= 7.3
 
 
 ## 安装方式
@@ -37,4 +37,29 @@ composer require leeprincne/laravel-unit
 
 route::get('/', 'UnitController@index');
 route::post('/', 'UnitController@request')->name('unit.request');
+```
+
+## 控制器
+### validate 验证器
+#### laravel >= 5.6
+```
+$request->validate([
+    'namespace' => "bail|required",
+], [
+    'namespace.required' => ':attribute 是必填项！',
+], [
+    'namespace' => '「命名空间」'
+]);
+```
+
+#### laravel <= 5.5
+关于 validate 验证器：laravel <= 5.5 版本使用; 而且在当前类中引入 trait 类： use Illuminate\Foundation\Validation\ValidatesRequests;
+```
+$this->validate($request, [
+    'namespace' => "bail|required",
+], [
+    'namespace.required' => ':attribute 是必填项！',
+], [
+    'namespace' => '「命名空间」'
+]);
 ```
