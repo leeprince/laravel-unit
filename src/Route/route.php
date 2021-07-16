@@ -7,4 +7,4 @@
  */
 
 Route::get('/', 'UnitController@index');
-Route::post('/', 'UnitController@request')->name('unit.request');
+Route::post('/local-unit-post', 'UnitController@request')->name('unit.request');
